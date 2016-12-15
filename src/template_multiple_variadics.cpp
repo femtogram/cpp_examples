@@ -16,6 +16,8 @@ struct Foo<Pack<Ts...>, Pack<Us...> > {
     std::tuple<Us...> second;
 };
 
+/********** USAGE EXAMPLE **********/
+
 #include <iostream>
 #include <string>
 

@@ -17,6 +17,8 @@ public:
     T get() { return std::get<T>(m_tup); }
 };
 
+/********** USAGE EXAMPLE ***********/
+
 #include <iostream>
 #include <string>
 
