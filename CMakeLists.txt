@@ -4,10 +4,13 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -std=c++14)
 
-set(SRC
-  src/main.cpp)
+set(EXAMPLES
+  template_tuples
+  template_multiple_variadics)
 
-add_executable(cpp_examples ${SRC})
+    foreach(EXAMPLE ${EXAMPLES})
+  add_executable(${EXAMPLE} src/${EXAMPLE}.cpp)
+endforeach(EXAMPLE)
 
 add_custom_target(run
   COMMAND __PROEJCT-NAME__
